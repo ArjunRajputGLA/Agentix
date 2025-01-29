@@ -8,5 +8,5 @@ export interface Agent {
   }
   
   export type CategoryAgents = {
-    [key: string]: Agent[];
+    [key: string]: Agent[]; 
   };
