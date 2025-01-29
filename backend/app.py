@@ -31,9 +31,11 @@ from ai_agents.youtube4 import youtube_summarizer4
 app = Flask(__name__)
 CORS(app, resources={
     r"/*": {
-        "origins": ["http://localhost:3000", os.environ.get("FRONTEND_URL")],
+        "origins": ["http://localhost:3000", "http://localhost:3001", os.environ.get("FRONTEND_URL")],
         "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type"]
+        "allow_headers": ["Content-Type"],
+        "expose_headers": ["Content-Type"],
+        "supports_credentials": True
     }
 })
 
